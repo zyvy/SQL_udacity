@@ -1,0 +1,11 @@
+Can we update the base tables by updating a view?
+
+Since views do not exist physically in the database, it is may or may not be possible to execute UPDATE operations on views. It depends on the SELECT query used in the view definition. Generally, if the SELECT statement contains either an AGGREGATE function, GROUPING, or JOIN, then the view may not update the underlying base tables.
+
+Can we insert or delete a tuple in the base table by inserting or deleting a tuple in a view?
+
+Again, it depends on the view definition. If a view is created from a single base table, then yes, you can insert/delete tuples by doing so in the view.
+
+Can we alter the view definition?
+
+Most of the databases allow you to alter a view. For example, Oracle and IBM DB2 allows us to alter views and provides CREATE OR REPLACE VIEW option to redefine a view.
